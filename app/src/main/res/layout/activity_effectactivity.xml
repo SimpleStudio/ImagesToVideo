@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_image"
+        android:layout_width="match_parent"
+        android:layout_height="350dp">
+    </android.support.v4.view.ViewPager>
+
+    <Button
+        android:id="@+id/btn_bgm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pager_image"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:text="BitRate"/>
+
+    <TextView
+        android:id="@+id/tv_bitrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_bgm"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pager_image"
+        android:layout_marginEnd="80dp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:text="500Kbps"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btn_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_bgm"
+        android:layout_marginStart="80dp"
+        android:text="time"/>
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_time"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pager_image"
+        android:layout_marginEnd="80dp"
+        android:text="2s"
+        android:textSize="20dp"/>
+
+
+    <Button
+        android:id="@+id/btn_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_time"
+        android:layout_marginStart="80dp"
+        android:text="EFFECT"/>
+
+
+    <TextView
+        android:id="@+id/tv_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_effect"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/pager_image"
+        android:layout_marginEnd="80dp"
+        android:text="none"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btn_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:text="Previous"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="NEXT"/>
+</RelativeLayout>
