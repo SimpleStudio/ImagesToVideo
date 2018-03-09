@@ -157,7 +157,7 @@ public class RecordFBOActivity extends Activity implements SurfaceHolder.Callbac
     public void surfaceCreated(SurfaceHolder holder) {
         Log.d(TAG, "surfaceCreated holder=" + holder);
 
-        File outputFile = new File(getFilesDir(), "fbo-gl-recording.mp4");
+        File outputFile = new File(getExternalCacheDir(), "fbo-gl-recording.mp4");
         SurfaceView sv = (SurfaceView) findViewById(R.id.fboActivity_surfaceView);
         mRenderThread = new RenderThread(sv.getHolder(), new ActivityHandler(this), outputFile,
                 MiscUtils.getDisplayRefreshNsec(this));
