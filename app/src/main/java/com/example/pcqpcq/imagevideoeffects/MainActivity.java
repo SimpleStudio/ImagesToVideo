@@ -10,6 +10,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.pcqpcq.imagevideoeffects.grafika.RecordFBOActivity;
+import com.example.pcqpcq.imagevideoeffects.opengl.OpenGlDemoActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -24,15 +27,34 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent aa = new Intent(MainActivity.this, EffectActivity.class);
-                startActivity(aa);
-
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
 
+    }
+
+    public void onEffectActivity(View v) {
+        // from here:
+        // https://stackoverflow.com/questions/43534345/ffmpeg-transition-effect-between-images-of-video-slideshow
+        startToActivity(EffectActivity.class);
+    }
+
+    public void onOpenGlDemoActivity(View v) {
+        // from here:
+        // http://bigflake.com/mediacodec/#EncodeAndMuxTest
+        startToActivity(OpenGlDemoActivity.class);
+    }
+
+    public void onRecordFBOActivity(View v) {
+        // from here, change output file to ExternalCacheDir:
+        // https://github.com/google/grafika/blob/master/app/src/main/java/com/android/grafika/RecordFBOActivity.java
+        startToActivity(RecordFBOActivity.class);
+    }
+
+    private void startToActivity(Class<?> cls) {
+        Intent aa = new Intent(MainActivity.this, cls);
+        startActivity(aa);
     }
 
     @Override

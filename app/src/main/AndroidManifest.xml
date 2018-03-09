@@ -25,6 +25,8 @@
         </activity>
         <activity android:name=".EffectActivity"/>
         <activity android:name=".EncodingActivity" />
+        <activity android:name=".opengl.OpenGlDemoActivity" />
+        <activity android:name=".grafika.RecordFBOActivity" />
     </application>
 
 </manifest>
